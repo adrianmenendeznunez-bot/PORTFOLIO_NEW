@@ -605,7 +605,7 @@
       <h3>Chatbot IA</h3>
       <p>Asistente conversacional inteligente con contexto dinámico. Haz preguntas y descubre cómo responde de forma natural y precisa.</p>
       <!-- ↓↓ Sustituye # por la URL real de tu chatbot ↓↓ -->
-      <a href="#" target="_blank" rel="noopener" class="demo-btn">Abrir chatbot →</a>
+      <a href="https://www.chatbase.co/ipFQ6psTwQ4Nch43_bMJb/help" target="_blank" rel="noopener" class="demo-btn">Abrir chatbot →</a>
     </div>
 
     <div class="demo-card">
@@ -703,39 +703,6 @@
 <footer>
   © 2025 Adrián Menéndez Núñez · Portfolio profesional · Hecho con HTML, CSS &amp; pasión por la tecnología
 </footer>
-<script>
-(function () {
-  if (!window.chatbase || window.chatbase("getState") !== "initialized") {
-    window.chatbase = (...arguments) => {
-      if (!window.chatbase.q) {
-        window.chatbase.q = [];
-      }
-      window.chatbase.q.push(arguments);
-    };
-    window.chatbase = new Proxy(window.chatbase, {
-      get(target, prop) {
-        if (prop === "q") {
-          return target.q;
-        }
-        return (...args) => target(prop, ...args);
-      }
-    });
-  }
 
-  const onLoad = function () {
-    const script = document.createElement("script");
-    script.src = "https://www.chatbase.co/embed.min.js";
-    script.id = "ipFQ6psTwQ4Nch43_bMJb";
-    script.domain = "www.chatbase.co";
-    document.body.appendChild(script);
-  };
-
-  if (document.readyState === "complete") {
-    onLoad();
-  } else {
-    window.addEventListener("load", onLoad);
-  }
-})();
-</script>
 </body>
 </html>
