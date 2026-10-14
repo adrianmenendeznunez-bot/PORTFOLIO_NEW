@@ -343,6 +343,20 @@
     }
     .demo-btn.ghost:hover { background: rgba(79,156,249,0.1); }
 
+    /* ── DEMO DESTACADA (VÍDEO) ── */
+    .demo-card.featured { grid-column: 1 / -1; text-align: left; }
+    .demo-card.featured p { max-width: 760px; }
+    .video-wrap {
+      position: relative; z-index: 1;
+      width: 100%; max-width: 860px;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.8rem;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-top: 1.5rem;
+    }
+    .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    
     /* ── TECNOLOGÍAS ── */
     #tecnologias { background: var(--bg); }
     .tech-grid {
@@ -529,6 +543,20 @@
   <div class="projects-grid">
 
     <div class="project-card">
+      <div class="project-icon">🧠</div>
+      <h3>Asistente de Automatización con IA</h3>
+      <p>Agente en Microsoft Foundry (GPT-5) que convierte la descripción de un negocio en un flujo de automatización para Make o n8n. Usa una base de conocimiento propia en Azure AI Search y aplica normativa española: RGPD, LSSI y condiciones de WhatsApp Business.</p>
+      <div class="project-tags">
+        <span class="tag">Microsoft Foundry</span>
+        <span class="tag">Azure AI Search</span>
+        <span class="tag">Make</span>
+        <span class="tag">n8n</span>
+      </div>
+      <div class="project-metric">Validado con 5 pruebas, incluidas peticiones que debe rechazar</div>
+      <a href="#demo-agente" class="project-link">Ver vídeo →</a>
+    </div>
+
+    <div class="project-card">
       <div class="project-icon">🤖</div>
       <h3>Chatbot con IA Generativa</h3>
       <p>Desarrollo de un asistente conversacional inteligente capaz de responder preguntas, guiar usuarios y mantener contexto en conversaciones complejas.</p>
@@ -599,6 +627,15 @@
   <div class="section-label">Pruébalo tú mismo</div>
   <div class="section-title">Demos en vivo</div>
   <div class="demos-grid">
+
+    <div class="demo-card featured" id="demo-agente">
+      <span class="demo-icon">🧠</span>
+      <h3>Asistente de Automatización con IA</h3>
+      <p>Demo de 4 min 49 s. Un taller mecánico pide citas online, recordatorio por WhatsApp y aviso cuando el coche está listo. Después pruebo dos peticiones que el agente debe rechazar o derivar.</p>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/bNIioew-2Ac" title="Asistente de Automatización con Microsoft Foundry: demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
 
     <div class="demo-card">
       <span class="demo-icon">🤖</span>
